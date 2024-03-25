@@ -9,6 +9,6 @@ RUN cd app && mvn clean install
 
 EXPOSE 8080
 
-RUN cp -r /app/target/hello_docker-0.0.1-SNAPSHOT.jar /app/app.jar
+RUN cp -r /app/target/hello_docker-0.0.1-SNAPSHOT.war /app/app.war
 
-ENTRYPOINT [ "java", "-jar", "/app/app.jar"]
+ENTRYPOINT [ "java", "-jar", "/app/app.war"]
